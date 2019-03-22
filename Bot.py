@@ -18,27 +18,7 @@ async def on_ready():
 @bot.command()
 async def support():
     await bot.say('__**HERE IS THE SUPPORT SERVER**__ https://discord.gg/a9TX5Fq ')
-    
-@bot.command(pass_context=True)
-async def mute(ctx,target:discord.Member):
-    role=discord.utils.get(ctx.message.server.roles,name='Muted')
-
-    await bot.add_roles(target,role)
-    
-@bot.command(pass_context=True)
-async def warn(ctx,target:discord.Member):
-	await bot.send_message(target,'__**U GOT A NEW WARNING!!!**__')
-	await bot.send_message(target,'DONT DO THAT AGAIN')
-	await bot.send_message(target,'DEAL?')
-	
-@bot.command(pass_context=True)
-async def kick(ctx,target:discord.Member):
-	await bot.kick(target)
-	
-@bot.command(pass_context=True)
-async def ban(ctx,target:discord.Member):
-	await bot.ban(target)
-    
+   
 @bot.command()
 async def creator():
     await bot.say('$**mehdi m.m.o is the owner of this bot**$')
@@ -55,11 +35,7 @@ async def yt():
     await bot.say('__**check Mehdi M.M.O Youtube Channel!!**__')
     await bot.say('https://www.youtube.com/channel/UCoJ_AY5z1xvYQbcJwW2XFew')
     await bot.say('__**subscribe and thanks!!**__')
-    
-@bot.command(pass_context=True)
-async def clear(ctx,num:int):
-    await bot.purge_from(ctx.message.channel,limit=num)
-    await bot.say('done __**PLEASE SUBSCRIBE TO MEHDI MMO TO GET A LOT OF OTHER FEAUTURES**__')
+     
     
 @bot.command()
 async def commands():
