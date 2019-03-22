@@ -13,6 +13,7 @@ async def on_ready():
     print(bot.user.id)
     print('--------')
     await bot.change_presence(game=discord.Game(name='type commands for help',type=0))
+    bot.remove.command('help')
     
 @bot.command()
 async def support():
@@ -82,3 +83,4 @@ async def on_message(message):
         await bot.send_message(message.author, embed=embed)
         
 bot.run('NTU3ODU4Mzc4OTE1Nzc0NDY0.D3Py6Q.RNKu7fhqHC-hRxiSok29BDVCT-w')
+        
